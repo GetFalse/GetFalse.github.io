@@ -4,7 +4,7 @@ workbox.setConfig({ modulePathPrefix: 'https://g.alicdn.com/kg/workbox/3.3.0/' }
 self.addEventListener('install', function (event) {
   event.waitUntil(
     caches.keys().then(function (names) {
-      var validSets = ["is-sw-fd31f8","is-html-fd31f8","is-jsdelivr-fd31f8","is-gtm-fd31f8","is-gravatar-fd31f8","is-theme-fd31f8","is-json-fd31f8"];
+      var validSets = ["is-sw-bef60b","is-html-bef60b","is-jsdelivr-bef60b","is-gtm-bef60b","is-gravatar-bef60b","is-theme-bef60b","is-json-bef60b"];
       return Promise.all(
         names
           .filter(function (name) { return !~validSets.indexOf(name); })
@@ -18,26 +18,26 @@ self.addEventListener('install', function (event) {
 });
 
 workbox.routing.registerRoute(new RegExp('sw\\.js'), workbox.strategies.networkOnly({
-  cacheName: 'is-sw-fd31f8',
+  cacheName: 'is-sw-bef60b',
 }));
 workbox.routing.registerRoute(new RegExp('https://cdn\\.jsdelivr\\.net'), workbox.strategies.staleWhileRevalidate({
-  cacheName: 'is-jsdelivr-fd31f8',
+  cacheName: 'is-jsdelivr-bef60b',
   plugins: [ new workbox.expiration.Plugin({ maxAgeSeconds: 14400 }) ],
 }));
 workbox.routing.registerRoute(new RegExp('https://www\\.googletagmanager\\.com\?id=.*'), workbox.strategies.staleWhileRevalidate({
-  cacheName: 'is-gtm-fd31f8',
+  cacheName: 'is-gtm-bef60b',
   plugins: [ new workbox.expiration.Plugin({ maxAgeSeconds: 14400 }) ],
 }));
 workbox.routing.registerRoute(new RegExp('https://www\\.gravatar\\.com'), workbox.strategies.staleWhileRevalidate({
-  cacheName: 'is-gravatar-fd31f8',
+  cacheName: 'is-gravatar-bef60b',
   plugins: [ new workbox.expiration.Plugin({ maxAgeSeconds: 14400 }) ],
 }));
 workbox.routing.registerRoute(new RegExp('/.*\\.(?:js|css|woff2|png|jpg|gif)$'), workbox.strategies.staleWhileRevalidate({
-  cacheName: 'is-theme-fd31f8',
+  cacheName: 'is-theme-bef60b',
   plugins: [ new workbox.expiration.Plugin({ maxAgeSeconds: 14400 }) ],
 }));
 workbox.routing.registerRoute(new RegExp('/.*\\.json'), workbox.strategies.cacheFirst({
-  cacheName: 'is-json-fd31f8',
+  cacheName: 'is-json-bef60b',
   plugins: [ new workbox.expiration.Plugin({ maxAgeSeconds: 14400 }) ],
 }));
 
