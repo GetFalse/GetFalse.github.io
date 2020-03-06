@@ -8,16 +8,16 @@
 <link rel="canonical" href="https://blog.bugbak.com/2019/09/13/gitignore%E8%AF%AD%E6%B3%95%E8%A7%84%E8%8C%83/">
 <link rel="icon" type="image/x-icon" href="/image/favicon.ico">
 
-<meta name="description" content="空行或是以 # 开头的行即注释行将被忽略。可以在前面添加 正斜杠&#x2F; 来避免递归,下面的例子中可以很明白的看出来与下一条的区别。可以在后面添加 正斜杠&#x2F; 来忽略文件夹，例如 build&#x2F; 即忽略 build 文件夹，&#x2F;doc&#x2F;build&#x2F; 这样的目录也会忽略。可以使用 ! 来否定忽略，即比如在前面用了*.apk，然后使用!a.apk，则这个a.apk不会被忽略。用 * 来匹配零个或多个字符，如*.[">
+<meta name="description" content=".gitignore为何物？从名字就可以看出来，就是在git里面忽略一些文件，比如：idea打开项目后的.idea文件。这些文件没有必要上传到git仓库，而且每个人idea的配置可能还不一样，pull下来别人的配置还可能会导致一些谜之问题。这时候聪明的同学肯定就会说，把不需要的文件不add到git中不就可以了吗？没错，让git不去管理这些文件的确是可以的，但人都会犯错，不保证每个人都不会将这些文件">
 <meta property="og:type" content="website">
 <meta property="og:title" content=".gitignore语法规范">
 <meta property="og:url" content="https://blog.bugbak.com/2019/09/13/gitignore%E8%AF%AD%E6%B3%95%E8%A7%84%E8%8C%83/index.html">
 <meta property="og:site_name" content="BugBak">
-<meta property="og:description" content="空行或是以 # 开头的行即注释行将被忽略。可以在前面添加 正斜杠&#x2F; 来避免递归,下面的例子中可以很明白的看出来与下一条的区别。可以在后面添加 正斜杠&#x2F; 来忽略文件夹，例如 build&#x2F; 即忽略 build 文件夹，&#x2F;doc&#x2F;build&#x2F; 这样的目录也会忽略。可以使用 ! 来否定忽略，即比如在前面用了*.apk，然后使用!a.apk，则这个a.apk不会被忽略。用 * 来匹配零个或多个字符，如*.[">
+<meta property="og:description" content=".gitignore为何物？从名字就可以看出来，就是在git里面忽略一些文件，比如：idea打开项目后的.idea文件。这些文件没有必要上传到git仓库，而且每个人idea的配置可能还不一样，pull下来别人的配置还可能会导致一些谜之问题。这时候聪明的同学肯定就会说，把不需要的文件不add到git中不就可以了吗？没错，让git不去管理这些文件的确是可以的，但人都会犯错，不保证每个人都不会将这些文件">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://blog.bugbak.com/2019/09/13/gitignore%E8%AF%AD%E6%B3%95%E8%A7%84%E8%8C%83/image/avatar.jpg">
-<meta property="article:published_time" content="2019-09-13T20:46:25.000Z">
-<meta property="article:modified_time" content="2020-03-06T03:20:20.995Z">
+<meta property="article:published_time" content="2019-09-13T20:47:12.000Z">
+<meta property="article:modified_time" content="2020-03-06T06:34:29.032Z">
 <meta property="article:author" content="Dz">
 <meta property="article:tag" content="git">
 <meta name="twitter:card" content="summary">
@@ -30,7 +30,7 @@
 <link rel="stylesheet" href="/theme.bc78bd5649d5382c09e2.css">
 
 
-<script src="/config.6a18057eae77fb1e044d.js"></script>
+<script src="/config.f8fc7cbb1880aed659e8.js"></script>
 
 
 <meta name="generator" content="Hexo 4.2.0"></head>
